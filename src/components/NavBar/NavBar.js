@@ -1,39 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
-import { flexbox } from 'styled-system';
-import { down, up } from '../../mixins';
-import theme from '../../theme';
-import Box from '../Box/Box';
+import { down, up } from '../../global/mixins';
+import theme from '../../global/theme';
+import Box from '../common/Box';
+import Logo from '../Logo/Logo';
+import { MobileMenu } from './MobileMenu';
 
 const Bar = styled(Box)`
     display: flex;
     justify-content: space-between;
 `
-const Logo = styled.div`
-`
-const NavList = styled.ul`
-`
-const NavItem = styled.li`
-
-`
 
 const NavBar = props => {
     return (
         <Bar>
-            <Logo>
-                Logo
-            </Logo>
-            <NavList>
-                <NavItem>
-                    Skills
-                </NavItem>
-                <NavItem>
-                    Projects
-                </NavItem>
-                <NavItem>
-                    Contacts
-                </NavItem>
-            </NavList>
+            <Logo />
+            <MobileMenu />
 
         </Bar>
     )
