@@ -9,6 +9,7 @@ import Header from '../Header';
 import TechAndSkills from '../TechAndSkills';
 import ImageSpacer from '../ImageSpacer';
 import Portfolio from '../Portfolio';
+import Contacts from '../Contacts';
 
 const App = props => (
   <ThemeProvider theme={theme}>
@@ -18,7 +19,7 @@ const App = props => (
       <TechAndSkills />
       <ImageSpacer />
       <Portfolio />
-      <ImageSpacer />
+      <Contacts />
     </Box>
   </ThemeProvider >
 )

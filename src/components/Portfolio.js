@@ -14,9 +14,10 @@ import { projects } from '../projects.json'
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
-const projectsArray = projects
-
 const Container = styled(Box)`
+    background-color: ${props => props.theme.pallete.secondary};
+    margin: 0 -20px;
+    padding: 20px 0;
     .swiper-container {
       width: 100%;
       height: 100%;
@@ -61,7 +62,8 @@ const Container = styled(Box)`
     }
 `
 
-const StyledDescription = styled.div`  
+const StyledDescription = styled.div`
+    margin-left: 20px;
     h5 {
         ${props => props.theme.typography.h5}
     }
@@ -77,7 +79,7 @@ const Card = styled(Box)`
     padding-bottom: 20px;
     background: rgba(255,255,255, 0.3);
     border-radius: 10px;
-    box-shadow: 1px 1px 5px white;
+    box-shadow: 1px 2px 5px rgba(1,1,1, 0.35);
     margin-bottom: 20px;
 
     & .card__image {
@@ -90,9 +92,13 @@ const Card = styled(Box)`
 
     .card__description {
         padding: 0 20px;
-        & p, a {
+        & p {
             text-align: left;
             line-height: 1.3em;
+        }
+        .link { 
+            width: 100%;
+            text-align: right;
         }
     }
     `
@@ -108,10 +114,10 @@ const Portfolio = () => {
                 slidesPerView={1}
                 navigation
                 scrollbar={{ draggable: true }}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
+            // onSlideChange={() => console.log('slide change')}
+            // onSwiper={(swiper) => console.log(swiper)}
             >
-                {projectsArray.map((project, index) => (
+                {projects.map((project, index) => (
                     <SwiperSlide key={index}>
                         <Card>
                             <div
@@ -122,37 +128,14 @@ const Portfolio = () => {
                             <div className="card__description">
                                 <h5>{project.title}</h5>
                                 <p>Technologies used: <br /> {project.description}</p>
-                                <a href={project.link}>Link to a project</a>
+                                <div className="link">
+                                    <a href={project.link}>{"Check it out >>"}</a>
+                                </div>
+
                             </div>
                         </Card>
                     </SwiperSlide>
                 ))}
-                <SwiperSlide >
-                    <Card>
-                        <div
-                            className="card__image"
-                            style={{ backgroundImage: `url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80")` }}
-                            alt="project1"
-                        />
-                        <div className="card__description">
-                            <h5>Project Name</h5>
-                            <p><u>Technologies used:</u> HTML, CSS, REACT, Styled Systems/ Components</p>
-                            <a>Link to a project</a>
-                        </div>
-
-                    </Card>
-                </SwiperSlide>
-                <SwiperSlide >
-                    Slide 2
-                </SwiperSlide >
-                <SwiperSlide >
-                    Slide 3
-                </SwiperSlide>
-                <SwiperSlide >
-                    Slide 4
-                </SwiperSlide>
-
-
             </Swiper>
         </Container >
     )

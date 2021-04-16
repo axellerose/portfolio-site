@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { up } from '../../global/mixins';
 import { ReactComponent as OpenMenu } from '../../assets/menu.svg';

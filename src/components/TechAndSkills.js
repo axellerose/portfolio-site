@@ -87,8 +87,8 @@ const TechAndSkills = () => {
             </StyledDescription>
             <StyledPicturesBlock>
 
-                {pictures.map(picture => (
-                    <StyledSvg>
+                {pictures.map((picture, index) => (
+                    <StyledSvg key={index}>
                         { picture}
                     </StyledSvg>
                 ))}
