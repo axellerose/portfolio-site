@@ -1,4 +1,6 @@
-import "@fontsource/lekton"
+import "@fontsource/lekton";
+import "@fontsource/exo/400.css";
+
 const breakpoints = ['40em', '52em', '64em', '80em'] // [640px , 832px, 1024px, 1280px]
 
 // aliases
@@ -10,6 +12,7 @@ breakpoints.xl = breakpoints[3] // 1280px
 export const breakpointsAliases = ["xs", "sm", "md", "lg"];
 
 const fontFamilyPrimary = "Lekton, sans-serif"
+const fontFamilySecondary = "Exo, sasn-serif"
 
 const space = [];
 for (let i = 0; i <= 200; i++) {
@@ -21,21 +24,20 @@ const pallete = {
   common: {
     black: "#000",
     white: "#fff",
-    yellow: ['#F4C271', '#FFC868']
+    yellow: ['#F4C271', '#FEB639']
   },
   primary: {
     main: '#3A3C4D',
     contrastText: '#DFE0E9'
   },
-  secondary: ['#3A3C4D', '#282B3A'],
+  secondary: '#282B3A',
   text: {
     primary: '#DFE0E9',
     secondary: '#94949A',
-    input: '#DFE0E9'
+    input: '#DFE0E9',
+    active: '#F4C271'
   },
-  button: {
-    primary: '#F4C271'
-  }
+  button: '#FEB639'
 }
 
 const typography = {
@@ -43,40 +45,50 @@ const typography = {
   fontSize: 14,
   fontFamily: {
     primary: fontFamilyPrimary,
+    secondary: fontFamilySecondary
   },
   h1: `
       font-family: ${fontFamilyPrimary};
+      font-size: 4em;
     `,
   h2: `
       font-family: ${fontFamilyPrimary};
- 
+      font-size: 2em;
     `,
-  subtitle1: `
+  h5: `
       font-family: ${fontFamilyPrimary};
-  
+      font-size: 1.5em;
     `,
-  body1: `
+  h6: `
       font-family: ${fontFamilyPrimary};
-  
+      font-size: 1em;
+      color: ${pallete.text.secondary};
+      font-weight: 600;
+    `,
+  logo: `
+      font-family: ${fontFamilyPrimary};
+      font-size: 2em;
+    `,
+  body: `
+      font-family: ${fontFamilySecondary};
+      font-size: 1em;
+      line-height: 1.4em;
       `,
-  body2: `
-      font-family: ${fontFamilyPrimary};
-
-      `,
-  body3: `
-      font-family: ${fontFamilyPrimary};
-    `,
   input: `
       color: ${pallete.text.input};
+      font-family: ${fontFamilySecondary};
+    `,
+  link: `
+      color: ${pallete.text.active};
       font-family: ${fontFamilyPrimary};
+      text-decoration: underline;
     `,
   button: `
-      color: inherit;
-      font-family: ${fontFamilyPrimary};
-      
+      color: ${pallete.button};
+      font-family: ${fontFamilySecondary};
     `,
   caption: `
-      font-family: ${fontFamilyPrimary};
+      font-family: ${fontFamilySecondary};
       color: ${pallete.text.secondary};
     `,
 }

@@ -11,9 +11,9 @@ const Svg = styled.div`
     width: auto;
     height: 1em;
   }
-  & path {
+  /* & path {
     ${({ colorType = "fill" }) => colorType}: currentColor;
-  }
+  } */
 
   ${fontSize}
   ${color}
