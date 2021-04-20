@@ -48,7 +48,10 @@ const Header = () => {
                 <StyledDescription>
                     <h6># introduction</h6>
                     <h5>Full-Stack Web Developer, <br /> based in Barcelona, Spain</h5>
-                    <p>I’m a fast-learning and responsible person that is looking for new opportunities and challenges.</p>
+                    <p>A fast-learning and responsible person that is looking for new opportunities and challenges.
+                    My 4 year experience of working in IT company as International Sales manager & QA
+                    boosted my communication skills, ability to work under stress conditions and multicultural collaboration.
+                    </p>
                     <a href="#cv">{"check my CV ->"}</a>
                 </StyledDescription>
             </div>

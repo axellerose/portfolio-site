@@ -76,16 +76,34 @@ const typography = {
       `,
   input: `
       color: ${pallete.text.input};
-      font-family: ${fontFamilySecondary};
+      background: none;
+      border: none;
+      line-height: 1.2em;
+      font-size: 1em;
+      outline: none;
+      font-family: ${fontFamilyPrimary};
+      resize: none;
     `,
+  label: `
+    font-family: ${fontFamilySecondary};
+    line-height: 1.2em;
+
+  `,
   link: `
       color: ${pallete.text.active};
       font-family: ${fontFamilyPrimary};
       text-decoration: underline;
     `,
   button: `
-      color: ${pallete.button};
-      font-family: ${fontFamilySecondary};
+      background-color: ${pallete.button};
+      color: ${pallete.secondary};
+      font-family: ${fontFamilyPrimary};
+      font-size: 1em;
+      font-weight: 700;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 10px;
+      letter-spacing: 1px;
     `,
   caption: `
       font-family: ${fontFamilySecondary};

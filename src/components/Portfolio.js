@@ -75,9 +75,9 @@ const StyledDescription = styled.div`
 const Card = styled(Box)`
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 60%;
     padding-bottom: 20px;
-    background: rgba(255,255,255, 0.3);
+    background: rgba(255,255,255, 0.35);
     border-radius: 10px;
     box-shadow: 1px 2px 5px rgba(1,1,1, 0.35);
     margin-bottom: 20px;
