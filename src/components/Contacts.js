@@ -15,12 +15,12 @@ const Container = styled(Box)`
 
 const StyledDescription = styled.div`
     margin-left: 20px;
-    h5 {
-        ${props => props.theme.typography.h5}
+    h3 {
+        ${props => props.theme.typography.h3}
         width: 80%;
     }
-    h6 {
-        ${props => props.theme.typography.h6}
+    h4 {
+        ${props => props.theme.typography.h4}
     }
 `
 
@@ -54,7 +54,7 @@ const StyledForm = styled.form`
     input, textarea {
         ${props => props.theme.typography.input}
         &::placeholder {
-
+            font-size: 0.8em;
         }
     };
     
@@ -71,8 +71,8 @@ const Contacts = () => {
     return (
         <Container display="flex" flexDirection="column">
             <StyledDescription>
-                <h6># contact me</h6>
-                <h5>Have got a Project? Let's talk!</h5>
+                <h4># contact me</h4>
+                <h3>Have got a Project? Let's talk!</h3>
             </StyledDescription>
             <Box display="flex" justifyContent="space-around" >
                 <StyledImage />
@@ -85,19 +85,19 @@ const Contacts = () => {
                 </Box>
             </Box>
 
-            <StyledForm>
+            <StyledForm id="contacts">
                 <h3 >Send me a message</h3>
                 <Box className="form__control" >
-                    <label htmlFor="">Name:</label>
-                    <input />
+                    <label htmlFor="">Name :</label>
+                    <input type="text" placeholder="Richard Hendricks" />
                 </Box>
                 <Box className="form__control">
-                    <label htmlFor="">Email:</label>
-                    <input />
+                    <label htmlFor="">Email :</label>
+                    <input type="email" placeholder="richard@piedpiper.com" />
                 </Box>
                 <Box className="form__control">
-                    <label htmlFor="">Message:</label>
-                    <textarea rows="3" />
+                    <label htmlFor="">Message :</label>
+                    <textarea type="text" rows="3" placeholder="Hi there! I've got a job for you!" />
                 </Box>
                 <button>Send</button>
             </StyledForm>

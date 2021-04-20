@@ -55,11 +55,11 @@ const typography = {
       font-family: ${fontFamilyPrimary};
       font-size: 2em;
     `,
-  h5: `
+  h3: `
       font-family: ${fontFamilyPrimary};
       font-size: 1.5em;
     `,
-  h6: `
+  h4: `
       font-family: ${fontFamilyPrimary};
       font-size: 1em;
       color: ${pallete.text.secondary};
@@ -83,6 +83,9 @@ const typography = {
       outline: none;
       font-family: ${fontFamilyPrimary};
       resize: none;
+      &::placeholder {
+        color: ${pallete.text.secondary}
+      }
     `,
   label: `
     font-family: ${fontFamilySecondary};

@@ -64,11 +64,11 @@ const Container = styled(Box)`
 
 const StyledDescription = styled.div`
     margin-left: 20px;
-    h5 {
-        ${props => props.theme.typography.h5}
+    h3 {
+        ${props => props.theme.typography.h3}
     }
-    h6 {
-        ${props => props.theme.typography.h6}
+    h4 {
+        ${props => props.theme.typography.h4}
     }
 `
 
@@ -107,8 +107,8 @@ const Portfolio = () => {
     return (
         <Container id="projects">
             <StyledDescription>
-                <h6># portfolio</h6>
-                <h5>Projects and Selected Works</h5>
+                <h4># portfolio</h4>
+                <h3>Projects and Selected Works</h3>
             </StyledDescription>
             <Swiper
                 slidesPerView={1}

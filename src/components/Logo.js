@@ -10,7 +10,7 @@ const Logotype = styled.h1`
 `
 const Logo = () => {
     return (
-        <Logotype>{`<IamAlex />`}</Logotype>
+        <Logotype id="up">{`<IamAlex />`}</Logotype>
     )
 }
 

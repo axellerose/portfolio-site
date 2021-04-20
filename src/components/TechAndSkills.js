@@ -41,11 +41,11 @@ const Container = styled(Box)`
     padding: ${props => props.theme.space[5]};
 `
 const StyledDescription = styled.div`  
-    h5 {
-        ${props => props.theme.typography.h5}
+    h3 {
+        ${props => props.theme.typography.h3}
     }
-    h6 {
-        ${props => props.theme.typography.h6}
+    h4 {
+        ${props => props.theme.typography.h4}
     }
     p {
         ${props => props.theme.typography.body}
@@ -72,8 +72,8 @@ const TechAndSkills = () => {
     return (
         <Container id="skills">
             <StyledDescription>
-                <h6># technology and skills</h6>
-                <h5>Proficiency & Responsibility</h5>
+                <h4># technology and skills</h4>
+                <h3>Proficiency & Responsibility</h3>
                 <p>
                     Starting from zero in late 2019 I’ve
                     learned a stack of technologies and

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Box from '../common/Box';
 import Logo from '../Logo';
 import { MobileMenu } from './MobileMenu';
+import FixedButtons from './FixedButtons';
 
 const Bar = styled(Box)`
 
@@ -13,6 +14,7 @@ const NavBar = () => {
         <Bar>
             <Logo />
             <MobileMenu />
+            <FixedButtons />
         </Bar>
     )
 }

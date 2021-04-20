@@ -10,6 +10,7 @@ import TechAndSkills from '../TechAndSkills';
 import ImageSpacer from '../ImageSpacer';
 import Portfolio from '../Portfolio';
 import Contacts from '../Contacts';
+import Footer from '../Footer';
 
 const App = props => (
   <ThemeProvider theme={theme}>
@@ -20,6 +21,7 @@ const App = props => (
       <ImageSpacer />
       <Portfolio />
       <Contacts />
+      <Footer />
     </Box>
   </ThemeProvider >
 )

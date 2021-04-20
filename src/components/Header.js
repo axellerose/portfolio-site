@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 import Box from './common/Box';
 import Bg from '../assets/developer-bg.png';
 
@@ -24,11 +24,11 @@ const StyledTitle = styled.h2`
 
 const StyledDescription = styled.div`
     margin-bottom: 40px;
-    h5 {
-        ${props => props.theme.typography.h5}
+    h3 {
+        ${props => props.theme.typography.h3}
     }
-    h6 {
-        ${props => props.theme.typography.h6}
+    h4 {
+        ${props => props.theme.typography.h4}
     }
     p {
         ${props => props.theme.typography.body}
@@ -39,6 +39,7 @@ const StyledDescription = styled.div`
 `
 
 const Header = () => {
+
     return (
         <>
             <ContainerWithBg>
@@ -46,8 +47,8 @@ const Header = () => {
             </ContainerWithBg>
             <div>
                 <StyledDescription>
-                    <h6># introduction</h6>
-                    <h5>Full-Stack Web Developer, <br /> based in Barcelona, Spain</h5>
+                    <h4># introduction</h4>
+                    <h3>Full-Stack Web Developer, <br /> based in Barcelona, Spain</h3>
                     <p>A fast-learning and responsible person that is looking for new opportunities and challenges.
                     My 4 year experience of working in IT company as International Sales manager & QA
                     boosted my communication skills, ability to work under stress conditions and multicultural collaboration.
