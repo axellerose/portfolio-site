@@ -10,7 +10,7 @@ const StyledSvg = styled(Svg)`
     .up {
         position: fixed;
         bottom: 1.5em;
-        right: 2em;
+        right: 1.2 em;
         z-index: 5;
         transform: rotate(90deg);
         height: 2em;
@@ -26,9 +26,6 @@ const StyledSvg = styled(Svg)`
             display: none;
         `}
     }
-   
-    
-   
     
     & path {
         ${({ colorType = "fill" }) => colorType}: currentColor;
