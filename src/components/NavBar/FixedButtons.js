@@ -10,7 +10,7 @@ const StyledSvg = styled(Svg)`
     .up {
         position: fixed;
         bottom: 1.5em;
-        right: 1.2 em;
+        right: 1.2em;
         z-index: 5;
         transform: rotate(90deg);
         height: 2em;
