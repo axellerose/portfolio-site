@@ -31,15 +31,25 @@ const StyledSvg = styled(Svg)`
     }  
 `
 
+const scrollUp = () => {
+    window.scrollTo(0, 0)
+    console.log("up!")
+}
+
+const scrollDown = () => {
+    window.scrollTo(0, 800)
+    console.log("up!")
+}
+
 const FixedButtons = () => {
     return (
         <>
-            <a href="#up">
+            <div onClick={scrollUp}>
                 <StyledSvg ><Arrow className="up" /></StyledSvg>
-            </a>
-            <a href="#up">
+            </div>
+            <div onClick={scrollDown}>
                 <StyledSvg ><Mail className="mail" /></StyledSvg>
-            </a>
+            </div>
         </>
     )
 }
