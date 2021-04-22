@@ -48,12 +48,13 @@ const StyledForm = styled.form`
     .form__control {
         width: 75%;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         margin-top: 10px;
     }
 
     input, textarea {
         ${props => props.theme.typography.input}
+        width: 65%;
         &::placeholder {
             font-size: 0.8em;
         }
@@ -61,6 +62,8 @@ const StyledForm = styled.form`
     
     label {
         ${props => props.theme.typography.label};
+        width: 35%;
+        white-space: nowrap;
     }
     button {
         ${props => props.theme.typography.button};
