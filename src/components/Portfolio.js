@@ -18,6 +18,7 @@ const Container = styled(Box)`
     background-color: ${props => props.theme.pallete.secondary};
     margin: 0 -20px;
     padding: 20px 0;
+
     .swiper-container {
       width: 100%;
       height: 100%;
@@ -26,6 +27,7 @@ const Container = styled(Box)`
     .swiper-button-next, .swiper-button-prev {
         color: white;
         outline: none;
+        margin: auto 0;
     }
 
     .swiper-slide {
@@ -113,7 +115,7 @@ const Portfolio = () => {
             <Swiper
                 slidesPerView={1}
                 navigation
-                scrollbar={{ draggable: true }}
+
             // onSlideChange={() => console.log('slide change')}
             // onSwiper={(swiper) => console.log(swiper)}
             >
