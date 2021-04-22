@@ -3,6 +3,11 @@ import styled from 'styled-components';
 import Box from './common/Box';
 import Avatar from '../assets/avatar.png';
 import emailjs from 'emailjs-com';
+import Loader from './Loader';
+
+const SERVICE_ID = "service_mbnbpk5";
+const TEMPLATE_ID = "template_f0p5w5h";
+const USER_ID = "user_jZrXi2I6JqNGUNyQZzy8N";
 
 const Container = styled(Box)`
     a {
@@ -32,7 +37,6 @@ const StyledImage = styled(Box)`
     border-radius: 50%;
     width: 120px;
     height: 120px;
-
 `
 
 const StyledForm = styled.form`
@@ -72,6 +76,7 @@ const StyledForm = styled.form`
 `
 
 const Contacts = () => {
+    const [loading, setLoading] = useState(false)
 
     const [template, setTemplate] = useState({
         user_name: '',
@@ -81,20 +86,18 @@ const Contacts = () => {
     });
 
     const sendEmail = e => {
-        const SERVICE_ID = "service_mbnbpk5";
-        const TEMPLATE_ID = "template_f0p5w5h";
-        const USER_ID = "user_jZrXi2I6JqNGUNyQZzy8N"
-
+        setLoading(true);
         e.preventDefault();
 
         emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
-            .then((result) => {
-                console.log(result.text);
-                alert("Thanks for reaching me out ! I will contact you back soon, cheers!");
-                clearForm();
+            .then(() => {
+                setTimeout(clearForm(), 2000)
+                // alert("Thanks for reaching me out ! I will contact you back soon, cheers!");
+
             }, (error) => {
                 console.log(error.text);
-            });
+            })
+
     }
 
     const changeHandler = e => {
@@ -108,10 +111,12 @@ const Contacts = () => {
             subject: '',
             message: '',
         })
+        setLoading(false)
     }
 
     return (
         <Container display="flex" flexDirection="column">
+            {loading && <Loader />}
             <StyledDescription>
                 <h4># contact me</h4>
                 <h3>Have got a Project? Let's talk!</h3>
