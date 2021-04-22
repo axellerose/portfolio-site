@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Svg from '../common/Svg';
 
 import { ReactComponent as Arrow } from '../../assets/arrow.svg';
-import { ReactComponent as Mail } from '../../assets/mail.svg';
 import { down } from '../../global/mixins';
 
 const StyledSvg = styled(Svg)`
