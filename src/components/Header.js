@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { useTheme } from 'styled-components';
+import styled from 'styled-components';
 import Box from './common/Box';
 import Bg from '../assets/developer-bg.png';
 
@@ -20,6 +20,7 @@ const StyledTitle = styled.h2`
     text-align: right;
     margin-left: auto;
     width: 50%;
+    margin-right: 0.5em;
 `
 
 const StyledDescription = styled.div`
@@ -43,7 +44,7 @@ const Header = () => {
     return (
         <>
             <ContainerWithBg>
-                <StyledTitle>Alexander Gerasymenko</StyledTitle>
+                <StyledTitle >Alexander Gerasymenko</StyledTitle>
             </ContainerWithBg>
             <div>
                 <StyledDescription>

@@ -9,13 +9,13 @@ import { down } from '../../global/mixins';
 const StyledSvg = styled(Svg)`
     .up {
         position: fixed;
-        bottom: 1.5em;
+        bottom: 3.9em;
         right: 1.2em;
         z-index: 5;
         transform: rotate(90deg);
-        height: 2em;
+        height: 2.5em;
+        opacity: 0.6;
     }
-
     .mail {
         position: fixed;
         top: 30%;
@@ -26,7 +26,6 @@ const StyledSvg = styled(Svg)`
             display: none;
         `}
     }
-    
     & path {
         ${({ colorType = "fill" }) => colorType}: currentColor;
     }  

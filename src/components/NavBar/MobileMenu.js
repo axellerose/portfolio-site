@@ -9,9 +9,6 @@ const Container = styled.div`
         transform: scale(0);
         width: 2.7em;
         height: 2.7em;
-        position: fixed;
-        top: 1em;
-        right: 1.6em;
         z-index: 4;
     }
 
@@ -44,12 +41,11 @@ const Container = styled.div`
 `
 
 const StyledSvg = styled(Svg)`
-    position: fixed;
-    top: 1.45em;
-    right: 2.2em;
+    width: 100%;
     width: 2em;
+    position: absolute;
+
     & svg { 
-        margin-left: auto;
         height: 1.875em;
         color: ${props => props.theme.pallete.common.white};
     }
