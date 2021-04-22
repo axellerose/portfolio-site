@@ -4,6 +4,7 @@ import Box from './common/Box';
 import Avatar from '../assets/avatar.png';
 import emailjs from 'emailjs-com';
 import Loader from './Loader';
+import Modal from './common/Modal';
 
 const SERVICE_ID = "service_mbnbpk5";
 const TEMPLATE_ID = "template_f0p5w5h";
@@ -75,8 +76,11 @@ const StyledForm = styled.form`
     }
 `
 
+const StyledModal = styled(Modal)``
+
 const Contacts = () => {
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(false);
+    const [modal, setModal] = useState(false)
 
     const [template, setTemplate] = useState({
         user_name: '',
@@ -85,18 +89,22 @@ const Contacts = () => {
         message: '',
     });
 
+    const modalHandler = () => {
+        setModal(!modal)
+    }
+
     const sendEmail = e => {
         setLoading(true);
         e.preventDefault();
 
         emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
             .then(() => {
-                setTimeout(clearForm(), 2000)
-                // alert("Thanks for reaching me out ! I will contact you back soon, cheers!");
 
+                // alert("Thanks for reaching me out ! I will contact you back soon, cheers!");
+                modalHandler()
             }, (error) => {
                 console.log(error.text);
-            })
+            }).finally(() => { setTimeout(clearForm(), setLoading(false), 2000) })
 
     }
 
@@ -111,12 +119,20 @@ const Contacts = () => {
             subject: '',
             message: '',
         })
-        setLoading(false)
+
     }
 
     return (
         <Container display="flex" flexDirection="column">
             {loading && <Loader />}
+            {modal &&
+                <StyledModal>
+                    <h2>Message sent</h2>
+                    <p>Thanks for reaching me out! I will contact you back soon, have a nice day!</p>
+                    <button type="button" onClick={modalHandler}>OK</button>
+                </StyledModal>
+            }
+
             <StyledDescription>
                 <h4># contact me</h4>
                 <h3>Have got a Project? Let's talk!</h3>
