@@ -52,7 +52,7 @@ const Footer = () => {
                     </a>
                 </ListItem>
                 <ListItem>
-                    <a href="https://www.linkedin.com/in/alex-gerasymenko/" target="_blank">
+                    <a href="https://www.linkedin.com/in/alex-gerasymenko/" target="_blank" rel="noreferrer">
                         <StyledSvg> <Linkedin /> </StyledSvg>
                     </a>
                 </ListItem>

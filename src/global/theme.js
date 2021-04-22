@@ -114,12 +114,14 @@ const typography = {
     `,
 }
 
-export default {
+const theme = {
   pallete,
   breakpoints,
   space,
   sizes,
   typography
 }
+
+export default theme;
 
 

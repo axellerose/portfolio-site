@@ -6,15 +6,17 @@ import { MobileMenu } from './MobileMenu';
 import FixedButtons from './FixedButtons';
 
 const Bar = styled(Box)`
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 `
 
 const NavBar = () => {
     return (
         <Bar>
             <Logo />
-            <MobileMenu />
             <FixedButtons />
+            <MobileMenu />
         </Bar>
     )
 }
