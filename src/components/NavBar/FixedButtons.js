@@ -7,7 +7,7 @@ import { ReactComponent as Mail } from '../../assets/mail.svg';
 import { down } from '../../global/mixins';
 
 const StyledSvg = styled(Svg)`
-    .up {
+    .arrow {
         position: fixed;
         bottom: 3.9em;
         right: 1.2em;
@@ -16,15 +16,13 @@ const StyledSvg = styled(Svg)`
         height: 2.5em;
         opacity: 0.6;
     }
-    .mail {
-        position: fixed;
-        top: 30%;
-        right: 2em;
-        z-index: 5;
-        height: 2em;
+    .down {
+        top: 3.9em;
+        transform: rotate(-90deg);
         ${down.sm`
             display: none;
         `}
+
     }
     & path {
         ${({ colorType = "fill" }) => colorType}: currentColor;
@@ -37,7 +35,7 @@ const scrollUp = () => {
 }
 
 const scrollDown = () => {
-    window.scrollTo(0, 800)
+    window.scrollTo(0, 2000)
     console.log("up!")
 }
 
@@ -45,10 +43,10 @@ const FixedButtons = () => {
     return (
         <>
             <div onClick={scrollUp}>
-                <StyledSvg ><Arrow className="up" /></StyledSvg>
+                <StyledSvg ><Arrow className="arrow" /></StyledSvg>
             </div>
             <div onClick={scrollDown}>
-                <StyledSvg ><Mail className="mail" /></StyledSvg>
+                <StyledSvg ><Arrow className="arrow down" /></StyledSvg>
             </div>
         </>
     )
