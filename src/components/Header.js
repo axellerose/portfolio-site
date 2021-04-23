@@ -7,12 +7,13 @@ import { up } from '../global/mixins';
 const ContainerWithBg = styled(Box)`
     width: 100%;
     background-image: url(${Bg});
-    background-size: contain;
+    background-size: 60%;
+    background-position: left top;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: 9rem;
+    
 
     ${up.sm`
         height: 12rem;
@@ -39,8 +40,14 @@ const StyledBar = styled.div`
     box-shadow: 0 5px 4px rgba(0,0,0, 0.25);
     `
 
+const Spacer = styled.div`
+    width: 100%;
+    height: 10vh;
+
+`
+
 const StyledDescription = styled.div`
-    margin-bottom: 40px;
+    margin: 60px 0;
     h3 {
         ${props => props.theme.typography.h3}
     }
@@ -59,21 +66,22 @@ const Header = () => {
 
     return (
         <>
-            <ContainerWithBg>
+            <ContainerWithBg flexDirection={['column', 'row', null]}>
                 <StyledTitle >Alexander Gerasymenko</StyledTitle>
                 <StyledBar />
-            </ContainerWithBg>
-            <div>
-                <StyledDescription>
-                    <h4># introduction</h4>
-                    <h3>Full-Stack Web Developer, <br /> based in Barcelona, Spain</h3>
-                    <p>A fast-learning and responsible person that is looking for new opportunities and challenges.
-                    My 4 year experience of working in IT company as International Sales manager & QA
-                    boosted my communication skills, ability to work under stress conditions and multicultural collaboration.
+                <Spacer />
+                <div>
+                    <StyledDescription>
+                        <h4># introduction</h4>
+                        <h3>Full-Stack Web Developer, <br /> based in Barcelona, Spain</h3>
+                        <p>A fast-learning and responsible person that is looking for new opportunities and challenges.
+                        My 4 year experience of working in IT company as International Sales manager & QA
+                        boosted my communication skills, ability to work under stress conditions and multicultural collaboration.
                     </p>
-                    <a href="https://drive.google.com/file/d/1HFnFJt_Bnwe1IxatwKriJYufrciOx3DJ/view?usp=sharing" target="_blank" rel="noreferrer">{"check my CV >>"}</a>
-                </StyledDescription>
-            </div>
+                        <a href="https://drive.google.com/file/d/1HFnFJt_Bnwe1IxatwKriJYufrciOx3DJ/view?usp=sharing" target="_blank" rel="noreferrer">{"check my CV >>"}</a>
+                    </StyledDescription>
+                </div>
+            </ContainerWithBg>
         </>
     )
 }
