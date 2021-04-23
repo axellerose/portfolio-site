@@ -1,5 +1,11 @@
 {
    "projects": [
+    {
+        "image" : "https://i.ibb.co/mFXTn2f/Screenshot-2021-04-23-at-12-17-13.png",
+        "title" : "Mediflix Layout Restyle",
+        "description" : "TypeScript, REACT, Gatsby, GraphQL, Styled Systems",
+        "link" : "https://hungry-johnson-c57f1c.netlify.app/"
+        }, 
         {
         "image" : "https://i.ibb.co/xDVhSYK/Screenshot-2021-04-23-at-10-45-34.png",
         "title" : "korsabarca Exp",
@@ -24,5 +30,6 @@
         "description" : "JS, REACT, CSS, Styled Systems",
         "link" : "https://iamalex.dev"
         }  
+        
     ]
 }
