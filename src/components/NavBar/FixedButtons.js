@@ -35,7 +35,7 @@ const FixedButtons = () => {
         let html = document.documentElement;
         let height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
         let scrollPos = window.scrollY;
-        scrollPos < height / 2 ? add_class_on_scroll() : remove_class_on_scroll();
+        scrollPos < height / 1.5 ? add_class_on_scroll() : remove_class_on_scroll();
     })
     return (
         <div onClick={scrollUp} >
