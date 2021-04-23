@@ -53,6 +53,7 @@ const Container = styled(Box)`
     h5 {
         ${props => props.theme.typography.h5}
         font-size: 1.2em;
+        text-decoration: underline;
     }
     p {
         ${props => props.theme.typography.body}
@@ -129,7 +130,8 @@ const Portfolio = () => {
                             />
                             <div className="card__description">
                                 <h5>{project.title}</h5>
-                                <p>Technologies used: <br /> {project.description}</p>
+                                <h4 style={{ textAlign: "left" }}>Tech spec:</h4>
+                                <p>{project.description}</p>
                                 <div className="link">
                                     <a href={project.link}>{"Check it out >>"}</a>
                                 </div>
