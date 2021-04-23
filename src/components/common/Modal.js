@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import Box from './Box';
-import { useState } from 'react';
 
 const Bg = styled.div`
     position: fixed;

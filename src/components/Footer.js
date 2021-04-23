@@ -39,7 +39,7 @@ const StyledSvg = styled(Svg)`
 const Footer = () => {
     return (
         <Container mx={-5} mt={5} px={5}>
-            <h5><a href="mailto:iamalex.dev@gmail.com">iamalex.dev@gmail.com</a> </h5>
+            <h5><a href="mailto:iAmAlex.dev@gmail.com">iAmAlex.dev@gmail.com</a> </h5>
             <StyledList>
                 <ListItem>
                     <a href="tg://resolve?domain=axellerose">
