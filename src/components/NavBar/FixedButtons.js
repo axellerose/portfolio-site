@@ -24,9 +24,7 @@ const StyledSvg = styled(Svg)`
 `
 const FixedButtons = () => {
 
-    const scrollUp = () => {
-        window.scrollTo(0, 0)
-    }
+    const scrollUp = () => window.scrollTo(0, 0);
 
     // Hide arrow on scroll down
     const add_class_on_scroll = () => document.getElementById("btn-up").classList.add("hide")
