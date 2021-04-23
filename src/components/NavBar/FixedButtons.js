@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Svg from '../common/Svg';
 
 import { ReactComponent as Arrow } from '../../assets/arrow.svg';
-import { down } from '../../global/mixins';
 
 const StyledSvg = styled(Svg)`
     .arrow {
@@ -15,39 +14,33 @@ const StyledSvg = styled(Svg)`
         height: 2.5em;
         opacity: 0.6;
     }
-    .down {
-        top: 3.9em;
-        transform: rotate(-90deg);
-        ${down.sm`
-            display: none;
-        `}
-
+    .hide {
+        opacity: 0;
+        transform: scale(0);
     }
     & path {
         ${({ colorType = "fill" }) => colorType}: currentColor;
     }  
 `
-
-const scrollUp = () => {
-    window.scrollTo(0, 0)
-    console.log("up!")
-}
-
-const scrollDown = () => {
-    window.scrollTo(0, 2000)
-    console.log("up!")
-}
-
 const FixedButtons = () => {
+
+    const scrollUp = () => window.scrollTo(0, 0);
+
+    // Hide arrow on scroll down
+    const add_class_on_scroll = () => document.getElementById("btn-up").classList.add("hide")
+    const remove_class_on_scroll = () => document.getElementById("btn-up").classList.remove("hide")
+
+    window.addEventListener('scroll', () => {
+        let body = document.body;
+        let html = document.documentElement;
+        let height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+        let scrollPos = window.scrollY;
+        scrollPos < height / 2 ? add_class_on_scroll() : remove_class_on_scroll();
+    })
     return (
-        <>
-            <div onClick={scrollUp}>
-                <StyledSvg ><Arrow className="arrow" /></StyledSvg>
-            </div>
-            <div onClick={scrollDown}>
-                <StyledSvg ><Arrow className="arrow down" /></StyledSvg>
-            </div>
-        </>
+        <div onClick={scrollUp} >
+            <StyledSvg ><Arrow id="btn-up" className="arrow" /></StyledSvg>
+        </div>
     )
 }
 
