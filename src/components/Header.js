@@ -10,7 +10,7 @@ const ContainerWithBg = styled(Box)`
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     height: 12rem;
 `
 const StyledTitle = styled.h2`
@@ -19,9 +19,20 @@ const StyledTitle = styled.h2`
     display: flex;
     text-align: right;
     margin-left: auto;
+    margin-bottom: 0;
     width: 50%;
     margin-right: 0.5em;
 `
+
+const StyledBar = styled.div`
+    height: 5px;
+    width: 48px;
+    background-color: ${props => props.theme.pallete.common.yellow[0]};
+    margin-left: auto;
+    margin-right: 0.5em;
+    margin-top: 4px;
+    box-shadow: 0 5px 4px rgba(0,0,0, 0.25);
+    `
 
 const StyledDescription = styled.div`
     margin-bottom: 40px;
@@ -45,6 +56,7 @@ const Header = () => {
         <>
             <ContainerWithBg>
                 <StyledTitle >Alexander Gerasymenko</StyledTitle>
+                <StyledBar />
             </ContainerWithBg>
             <div>
                 <StyledDescription>
