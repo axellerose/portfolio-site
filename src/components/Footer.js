@@ -4,6 +4,7 @@ import Box from './common/Box';
 import { ReactComponent as Telegram } from '../assets/techIcons/telegram.svg';
 import { ReactComponent as Skype } from '../assets/techIcons/skype.svg';
 import { ReactComponent as Linkedin } from '../assets/techIcons/linkedin.svg';
+import { ReactComponent as Git } from '../assets/techIcons/git.svg';
 import Svg from './common/Svg';
 
 const Container = styled(Box)`
@@ -54,6 +55,11 @@ const Footer = () => {
                 <ListItem>
                     <a href="https://www.linkedin.com/in/alex-gerasymenko/" target="_blank" rel="noreferrer">
                         <StyledSvg> <Linkedin /> </StyledSvg>
+                    </a>
+                </ListItem>
+                <ListItem>
+                    <a href="https://github.com/axellerose" target="_blank" rel="noreferrer">
+                        <StyledSvg> <Git /> </StyledSvg>
                     </a>
                 </ListItem>
 

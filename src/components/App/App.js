@@ -12,7 +12,7 @@ import Portfolio from '../Portfolio';
 import Contacts from '../Contacts';
 import Footer from '../Footer';
 
-const App = props => (
+const App = () => (
   <ThemeProvider theme={theme}>
     <Box mx={[theme.space[5], theme.space[5], theme.space[25], theme.space[50]]} className="App">
       <NavBar />
