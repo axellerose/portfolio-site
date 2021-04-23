@@ -96,6 +96,7 @@ const typography = {
       color: ${pallete.text.active};
       font-family: ${fontFamilyPrimary};
       text-decoration: underline;
+      font-size: 1.25em;
     `,
   button: `
       background-color: ${pallete.button};

@@ -54,7 +54,7 @@ const Header = () => {
                     My 4 year experience of working in IT company as International Sales manager & QA
                     boosted my communication skills, ability to work under stress conditions and multicultural collaboration.
                     </p>
-                    <a href="https://drive.google.com/file/d/1HFnFJt_Bnwe1IxatwKriJYufrciOx3DJ/view?usp=sharing" target="_blank" rel="noreferrer">{"check my CV ->"}</a>
+                    <a href="https://drive.google.com/file/d/1HFnFJt_Bnwe1IxatwKriJYufrciOx3DJ/view?usp=sharing" target="_blank" rel="noreferrer">{"check my CV >>"}</a>
                 </StyledDescription>
             </div>
         </>
