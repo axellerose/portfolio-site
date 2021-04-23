@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Box from './common/Box';
-import Bg from '../assets/developer-bg.png';
+import Bg from '../assets/developer.png';
+import { up } from '../global/mixins';
 
 const ContainerWithBg = styled(Box)`
     width: 100%;
@@ -11,7 +12,11 @@ const ContainerWithBg = styled(Box)`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: 12rem;
+    height: 9rem;
+
+    ${up.sm`
+        height: 12rem;
+    `}
 `
 const StyledTitle = styled.h2`
     ${props => props.theme.typography.h2};
