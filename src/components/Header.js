@@ -50,7 +50,7 @@ const StyledTitle = styled.h2`
 
 const StyledBar = styled.div`
     height: 5px;
-    width: ${between('48px', '96px', '400px', '1000px')};
+    width: ${between('48px', '60px', '400px', '1000px')};
     background-color: ${props => props.theme.pallete.common.yellow[0]};
     margin-left: auto;
     margin-right: 0.5em;

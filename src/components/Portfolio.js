@@ -11,6 +11,7 @@ import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/scrollbar/scrollbar.scss';
 
 import { projects } from '../projects.json'
+import { up } from '../global/mixins';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
@@ -22,6 +23,10 @@ const Container = styled(Box)`
     .swiper-container {
       width: 100%;
       height: 100%;
+
+      ${up.sm`
+        width: 80%;
+      `}
     }
   
     .swiper-button-next, .swiper-button-prev {
@@ -47,7 +52,6 @@ const Container = styled(Box)`
       -ms-flex-align: center;
       -webkit-align-items: center;
       align-items: center;
-
       
     }
     h5 {
@@ -85,6 +89,10 @@ const Card = styled(Box)`
     box-shadow: 1px 2px 5px rgba(1,1,1, 0.35);
     margin-bottom: 20px;
 
+    ${up.md`
+        width: 40%;
+    `}
+
     & .card__image {
         opacity: 0.85;
         height: 200px;
@@ -94,12 +102,25 @@ const Card = styled(Box)`
     }
 
     .card__description {
+
         padding: 0 20px;
+        h4 {
+            ${props => props.theme.typography.h4}
+        }
+        h5 {
+            ${props => props.theme.typography.h5}
+        }
+        h4 {
+            ${props => props.theme.typography.h4}
+            color: ${props => props.theme.pallete.common.white}
+        }
         & p {
+            ${props => props.theme.typography.body}
             text-align: left;
             line-height: 1.3em;
         }
         .link { 
+            ${props => props.theme.typography.link}
             width: 100%;
             text-align: right;
             font-size: 1.25em;
@@ -117,12 +138,6 @@ const Portfolio = () => {
             <Swiper
                 slidesPerView={1}
                 navigation
-                breakpoints={{
-                    800: {
-                        slidesPerView: 2,
-                        spaceBetween: 40
-                    },
-                }}
 
             // onSlideChange={() => console.log('slide change')}
             // onSwiper={(swiper) => console.log(swiper)}
@@ -136,8 +151,8 @@ const Portfolio = () => {
                                 alt={project.index}
                             />
                             <div className="card__description">
-                                <h5>{project.title}</h5>
-                                <h4 style={{ textAlign: "left" }}>Tech spec:</h4>
+                                <h4>{project.title}</h4>
+                                <h5 style={{ textAlign: "left" }}>Tech spec:</h5>
                                 <p>{project.description}</p>
                                 <div className="link">
                                     <a href={project.link}>{"See project >>"}</a>
