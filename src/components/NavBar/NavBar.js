@@ -13,7 +13,7 @@ const Bar = styled(Box)`
     justify-content: space-between;
 
     ${up.sm`
-        justify-content: space-evenly;
+        justify-content: space-between;
     `}
 `
 

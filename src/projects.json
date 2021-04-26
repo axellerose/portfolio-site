@@ -1,31 +1,31 @@
 {
    "projects": [
     {
-        "image" : "https://i.ibb.co/61fMQkJ/Screenshot-2021-04-23-at-16-22-57.png",
+        "image" : "https://i.ibb.co/QMH2P2d/medi-min.png",
         "title" : "Mediflix Layout Restyle",
         "description" : "TypeScript, REACT, Gatsby, GraphQL, Styled Systems",
         "link" : "https://hungry-johnson-c57f1c.netlify.app/"
         }, 
         {
-        "image" : "https://i.ibb.co/xDVhSYK/Screenshot-2021-04-23-at-10-45-34.png",
+        "image" : "https://i.ibb.co/mhPWM1t/kors-min.png",
         "title" : "korsabarca Exp",
         "description" : "JS, REACT, SASS, mongoDB, Node, Express, 0Auth, Redux, API Rest, Responsive",
         "link" : "https://korsabarca.herokuapp.com/"
         } ,
         {
-        "image" : "https://i.ibb.co/XJ8HVPq/nutriApp.png",
+        "image" : "https://i.ibb.co/kqD6RTH/nutri-min.png",
         "title" : "NutriApp",
         "description" : "JS, HBS, SASS, Node, MongoDB, Express, API Rest, Responsive",
         "link" : "http://nutriapp-project.herokuapp.com/"
         },        
         {
-        "image" : "https://i.ibb.co/x6JXp8C/Screenshot-2021-04-23-at-10-54-55.png",
+        "image" : "https://i.ibb.co/ys7h5L0/roul-min.png",
         "title" : "Roulette Of Colors",
         "description" : "HTML, CSS, JS, Canvas, Desktop Only",
         "link" : "https://axellerose.github.io/project-roulette/"
         },
         {
-        "image" : "https://i.ibb.co/WFnkdBm/Screenshot-2021-04-23-at-10-56-37.png",
+        "image" : "https://i.ibb.co/cbyW338/port-min.png",
         "title" : "<IamAlex /> Landing",
         "description" : "JS, REACT, CSS, Styled Systems",
         "link" : "https://iamalex.dev"
