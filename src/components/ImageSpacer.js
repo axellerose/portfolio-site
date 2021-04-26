@@ -7,7 +7,6 @@ const Spacer = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     height: 9em;
-    margin: 0 -20px;
     opacity: 0.5;
     z-index: 1;
 `

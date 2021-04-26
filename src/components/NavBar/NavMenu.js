@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { down } from '../../global/mixins';
 import Box from '../common/Box';
+import { color } from 'styled-system';
 
 const Container = styled(Box)`
     .menu__container {
         width: 100%;
-        flex-grow: 1;
     }
     ${down.sm`
         display: none;
@@ -16,22 +16,19 @@ const Container = styled(Box)`
 const Menu = styled.ul`
     list-style: none;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    
     margin: 0 auto;
-    
 `
 const Option = styled.li`
     a {
         text-decoration: none;
         color: inherit;
-        padding-right: 40px;
+        padding-right: 10px;
         &:focus {
             outline: none;
         }
     }
-    ${props => props.theme.typography.h3}
+    ${props => props.theme.typography.h4};
+    color: ${props => props.theme.pallete.text.primary};
 
     &:hover {
         color: ${props => props.theme.pallete.text.active};
@@ -39,8 +36,6 @@ const Option = styled.li`
 `
 
 export const NavMenu = () => {
-
-
     return (
         <Container >
             <Menu className="menu__container" >

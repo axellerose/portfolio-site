@@ -7,6 +7,7 @@ const Logotype = styled.h1`
     font-weight: 700;
     letter-spacing: 0.1em;
     text-shadow: 1px 2px 2px rgba(0,0,0, 0.4);
+    flex-grow: 1;
 `
 const Logo = () => {
     return (
