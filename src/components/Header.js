@@ -66,7 +66,7 @@ const StyledBar = styled.div`
     `
 
 const StyledDescription = styled(Box)`
-
+    max-width: 100%;
     h3 {
         ${props => props.theme.typography.h3}
     }
@@ -84,8 +84,8 @@ const StyledDescription = styled(Box)`
 const Header = () => {
 
     return (
-        <ContainerWithBg flexDirection={['column', 'row', null]}>
-            <Box>
+        <ContainerWithBg flexDirection={['column', 'row', null]} mx={[-5, null, null]}>
+            <Box pl={[5, 20, 30]} pr={[null, 10, 20]}>
                 <Box className="title">
                     <StyledTitle >Alexander Gerasymenko</StyledTitle>
                     <StyledBar />
@@ -93,11 +93,8 @@ const Header = () => {
                 <StyledImage src={Bg} />
             </Box>
 
-            <Box px={[null]}>
+            <Box pr={[5, 20, 30]} pl={[null, 10, 20]}>
                 <StyledDescription
-                    px={[5, 20, 30]}
-                    py={[5, 10, 10]}
-                    pl={[5, 20, 40]}
                 >
                     <h4># introduction</h4>
                     <h3>Full-Stack Web Developer, <br /> based in Barcelona, Spain</h3>
@@ -108,7 +105,7 @@ const Header = () => {
                     <a href="https://drive.google.com/file/d/1HFnFJt_Bnwe1IxatwKriJYufrciOx3DJ/view?usp=sharing" target="_blank" rel="noreferrer">{"check my CV >>"}</a>
                 </StyledDescription>
             </Box>
-        </ContainerWithBg>
+        </ContainerWithBg >
     )
 }
 
