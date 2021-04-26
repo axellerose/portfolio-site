@@ -16,6 +16,7 @@ const Container = styled(Box)`
         ${props => props.theme.typography.link}
     }
     .text__mailme {
+        ${props => props.theme.typography.body}
         line-height: 1.3em;
         text-align: center;
     }
@@ -59,6 +60,9 @@ const StyledForm = styled.form`
     width: 100%;
     background-color: rgba(255,255,255, 0.15);
     border-radius: 10px;
+    ${up.sm`
+        width: 60%;
+    `}
 
     h3 {
         ${props => props.theme.typography.h3}

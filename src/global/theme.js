@@ -61,17 +61,22 @@ const typography = {
     `,
   h2: `
       ${fontFamilyPrimary};
-      font-size: ${between('28px', '64px', '400px', '1500px')};
+      font-size: ${between('24px', '36px', '400px', '1500px')};
     `,
   h3: `
       ${fontFamilyPrimary};
-      font-size: ${between('24px', '32px', '400px', '1500px')};
+      font-size: ${between('20px', '26px', '400px', '1500px')};
     `,
   h4: `
       ${fontFamilySecondary};
-      font-size: ${between('16px', '24px', '400px', '1500px')};
+      font-size: ${between('16px', '20px', '400px', '1500px')};
       color: ${pallete.text.secondary};
     `,
+  h5: `
+    ${fontFamilySecondary};
+    font-size: ${between('12px', '16px', '400px', '1500px')};
+    color: ${pallete.text.primary};
+  `,
 
   logo: `
       ${fontFamilyPrimary};
@@ -79,7 +84,7 @@ const typography = {
     `,
   body: `
       ${fontFamilySecondary};
-      font-size: ${between('16px', '22px', '400px', '1500px')};
+      font-size: ${between('14px', '16px', '400px', '1500px')};
       line-height: 1.4em;
       `,
   input: `
@@ -87,7 +92,7 @@ const typography = {
       background: none;
       border: none;
       line-height: 1.2em;
-      font-size: ${between('16px', '24px', '400px', '1500px')};
+      font-size: ${between('14px', '16px', '400px', '1500px')};
       outline: none;
       ${fontFamilyPrimary};
       resize: none;
@@ -98,20 +103,20 @@ const typography = {
   label: `
     ${fontFamilySecondary};
     line-height: 1.2em;
-    font-size: ${between('16px', '24px', '400px', '1500px')};
+    font-size: ${between('16px', '18px', '400px', '1500px')};
 
   `,
   link: `
       color: ${pallete.text.active};
       ${fontFamilyPrimary};
       text-decoration: underline;
-      font-size: ${between('12px', '20px', '400px', '1500px')};
+      font-size: ${between('12px', '16px', '400px', '1500px')};
     `,
   button: `
       background-color: ${pallete.button};
       color: ${pallete.secondary};
       ${fontFamilySecondary};
-      font-size: 1em;
+      font-size: 1.1em;
       font-weight: 700;
       border: none;
       padding: 10px 25px;

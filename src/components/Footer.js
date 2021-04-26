@@ -35,15 +35,9 @@ const ListItem = styled.li`
 `
 const StyledSvg = styled(Svg)`
     & svg {
-        height: 1em;
-        height: 2em;
+        height: 32px;
+        height: 32px;
     }
-    ${up.sm`
-    & svg {
-        height: 1.5em;
-        height: 3em;
-    }
-    `}
     /* & path {
         ${({ colorType = "fill" }) => colorType}: currentColor;
     }  */
