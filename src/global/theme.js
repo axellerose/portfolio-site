@@ -1,5 +1,7 @@
-import "@fontsource/lekton";
-import "@fontsource/exo/400.css";
+// import "@fontsource/lekton";
+// import "@fontsource/exo/400.css";
+import "@fontsource/quicksand";
+import { between } from 'polished';
 
 const breakpoints = ['40em', '52em', '64em', '80em'] // [640px , 832px, 1024px, 1280px]
 
@@ -11,8 +13,14 @@ breakpoints.xl = breakpoints[3] // 1280px
 
 export const breakpointsAliases = ["xs", "sm", "md", "lg"];
 
-const fontFamilyPrimary = "Lekton, sans-serif"
-const fontFamilySecondary = "Exo, sasn-serif"
+const fontFamilyPrimary = `
+  font-family: "Quicksand";
+  font-weght: 400;
+`
+const fontFamilySecondary = `
+  font-family: "Quicksand";
+  font-weght: 700;
+`
 
 const space = [];
 for (let i = 0; i <= 200; i++) {
@@ -48,30 +56,30 @@ const typography = {
     secondary: fontFamilySecondary
   },
   h1: `
-      font-family: ${fontFamilyPrimary};
+      ${fontFamilyPrimary};
       font-size: 4em;
     `,
   h2: `
-      font-family: ${fontFamilyPrimary};
-      font-size: 2em;
+      ${fontFamilyPrimary};
+      font-size: ${between('28px', '64px', '400px', '1500px')};
     `,
   h3: `
-      font-family: ${fontFamilyPrimary};
-      font-size: 1.5em;
+      ${fontFamilyPrimary};
+      font-size: ${between('24px', '32px', '400px', '1500px')};
     `,
   h4: `
-      font-family: ${fontFamilyPrimary};
-      font-size: 1em;
+      ${fontFamilySecondary};
+      font-size: ${between('16px', '24px', '400px', '1500px')};
       color: ${pallete.text.secondary};
-      font-weight: 600;
     `,
+
   logo: `
-      font-family: ${fontFamilyPrimary};
+      ${fontFamilyPrimary};
       font-size: 2em;
     `,
   body: `
-      font-family: ${fontFamilySecondary};
-      font-size: 1em;
+      ${fontFamilySecondary};
+      font-size: ${between('16px', '22px', '400px', '1500px')};
       line-height: 1.4em;
       `,
   input: `
@@ -79,40 +87,37 @@ const typography = {
       background: none;
       border: none;
       line-height: 1.2em;
-      font-size: 1em;
+      font-size: ${between('16px', '24px', '400px', '1500px')};
       outline: none;
-      font-family: ${fontFamilyPrimary};
+      ${fontFamilyPrimary};
       resize: none;
       &::placeholder {
         color: ${pallete.text.secondary}
       }
     `,
   label: `
-    font-family: ${fontFamilySecondary};
+    ${fontFamilySecondary};
     line-height: 1.2em;
+    font-size: ${between('16px', '24px', '400px', '1500px')};
 
   `,
   link: `
       color: ${pallete.text.active};
-      font-family: ${fontFamilyPrimary};
+      ${fontFamilyPrimary};
       text-decoration: underline;
-      font-size: 1.25em;
+      font-size: ${between('12px', '20px', '400px', '1500px')};
     `,
   button: `
       background-color: ${pallete.button};
       color: ${pallete.secondary};
-      font-family: ${fontFamilyPrimary};
+      ${fontFamilySecondary};
       font-size: 1em;
       font-weight: 700;
       border: none;
       padding: 10px 25px;
       border-radius: 10px;
       letter-spacing: 1px;
-    `,
-  caption: `
-      font-family: ${fontFamilySecondary};
-      color: ${pallete.text.secondary};
-    `,
+    `
 }
 
 const theme = {

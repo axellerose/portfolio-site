@@ -5,6 +5,7 @@ import Avatar from '../assets/avatar.png';
 import emailjs from 'emailjs-com';
 import Loader from './Loader';
 import Modal from './common/Modal';
+import { up } from '../global/mixins';
 
 const SERVICE_ID = "service_mbnbpk5";
 const TEMPLATE_ID = "template_f0p5w5h";
@@ -25,6 +26,9 @@ const StyledDescription = styled.div`
     h3 {
         ${props => props.theme.typography.h3}
         width: 80%;
+        ${up.sm`
+        width: 100%;
+    `}
     }
     h4 {
         ${props => props.theme.typography.h4}
@@ -38,6 +42,12 @@ const StyledImage = styled(Box)`
     border-radius: 50%;
     width: 120px;
     height: 120px;
+
+    ${up.sm`
+        width: 160px;
+        height: 160px;
+        margin: 0 auto;
+    `}
 `
 
 const StyledForm = styled.form`
@@ -49,6 +59,10 @@ const StyledForm = styled.form`
     width: 100%;
     background-color: rgba(255,255,255, 0.15);
     border-radius: 10px;
+
+    h3 {
+        ${props => props.theme.typography.h3}
+    }
 
     .form__control {
         width: 75%;
@@ -119,11 +133,10 @@ const Contacts = () => {
             subject: '',
             message: '',
         })
-
     }
 
     return (
-        <Container display="flex" flexDirection="column">
+        <Container display="flex" flexDirection={["column", "row"]}>
             {loading && <Loader />}
             {modal &&
                 <StyledModal>
@@ -132,21 +145,27 @@ const Contacts = () => {
                     <button type="button" onClick={modalHandler}>OK</button>
                 </StyledModal>
             }
-
-            <StyledDescription>
-                <h4># contact me</h4>
-                <h3>Have got a Project? Let's talk!</h3>
-            </StyledDescription>
-            <Box display="flex" justifyContent="space-around" >
-                <StyledImage />
-                <Box className="text__mailme">
-                    <p>
-                        <a href="mailto:iamalex.dev@gmail.com?subject=Message from Contact form">
-                            Mail me directly
+            <Box display="flex" flexDirection="column" mx="auto">
+                <StyledDescription>
+                    <h4># contact me</h4>
+                    <h3>Have a Project? Let's talk!</h3>
+                </StyledDescription>
+                <Box
+                    display="flex"
+                    justifyContent={["space-evenly"]}
+                    flexDirection={['row', 'column', 'column']}
+                >
+                    <StyledImage />
+                    <Box className="text__mailme">
+                        <p>
+                            <a href="mailto:iamalex.dev@gmail.com?subject=Message from Contact form">
+                                Mail me directly
                         </a> <br />or<br /> use the contact form
                 </p>
+                    </Box>
                 </Box>
             </Box>
+
 
             <StyledForm id="contacts" className="contact-form" onSubmit={sendEmail}>
                 <h3 >Send me a message</h3>

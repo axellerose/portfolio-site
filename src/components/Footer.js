@@ -6,32 +6,44 @@ import { ReactComponent as Skype } from '../assets/techIcons/skype.svg';
 import { ReactComponent as Linkedin } from '../assets/techIcons/linkedin.svg';
 import { ReactComponent as Git } from '../assets/techIcons/git.svg';
 import Svg from './common/Svg';
+import { up } from '../global/mixins';
 
 const Container = styled(Box)`
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     background-color: ${props => props.theme.pallete.secondary};
 
     h5, a {
+        ${props => props.theme.typography.link}
         line-height: 2em;
-        color: ${props => props.theme.pallete.common.yellow[0]}
+        color: ${props => props.theme.pallete.common.yellow[0]};
+
     }
 `
 
 const StyledList = styled.ul`
     list-style: none;
     display: flex;
-    flex-direction: row;
     width: 100%;
+    ${up.sm`
+    width: auto`}
 `
 
 const ListItem = styled.li`
-    margin-right: 12px;
+   margin-right: 12px;
 `
 const StyledSvg = styled(Svg)`
     & svg {
         height: 1em;
         height: 2em;
     }
+    ${up.sm`
+    & svg {
+        height: 1.5em;
+        height: 3em;
+    }
+    `}
     /* & path {
         ${({ colorType = "fill" }) => colorType}: currentColor;
     }  */
@@ -39,8 +51,8 @@ const StyledSvg = styled(Svg)`
 
 const Footer = () => {
     return (
-        <Container mx={-5} mt={5} px={5}>
-            <h5><a href="mailto:iAmAlex.dev@gmail.com">iAmAlex.dev@gmail.com</a> </h5>
+        <Container mx={[-5, null, null]} mt={5} px={5}>
+            <Box my="auto"><a href="mailto:iAmAlex.dev@gmail.com">iAmAlex.dev@gmail.com</a> </Box>
             <StyledList>
                 <ListItem>
                     <a href="tg://resolve?domain=axellerose">
@@ -62,8 +74,6 @@ const Footer = () => {
                         <StyledSvg> <Git /> </StyledSvg>
                     </a>
                 </ListItem>
-
-
             </StyledList>
         </Container>
     )
