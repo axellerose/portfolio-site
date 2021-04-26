@@ -61,7 +61,10 @@ const StyledForm = styled.form`
     background-color: rgba(255,255,255, 0.15);
     border-radius: 10px;
     ${up.sm`
-        width: 60%;
+        width: 50%;
+    `}
+    ${up.md`
+        width: 40%;
     `}
 
     h3 {
@@ -145,7 +148,6 @@ const Contacts = () => {
             flexDirection={["column", "row"]}
             px={[5, 20, 40]}
             py={[5, 10, 10]}
-            mx={[-5, null, null]}
         >
             {loading && <Loader />}
             {modal &&

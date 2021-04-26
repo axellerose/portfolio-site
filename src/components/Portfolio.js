@@ -11,7 +11,6 @@ import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/scrollbar/scrollbar.scss';
 
 import { projects } from '../projects.json'
-import { up } from '../global/mixins';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
@@ -123,7 +122,6 @@ const Portfolio = () => {
             id="projects"
             px={[5, 20, 40]}
             py={[5, 10, 10]}
-            mx={[-5, null, null]}
         >
             <StyledDescription>
                 <h4># portfolio</h4>

@@ -48,7 +48,6 @@ const Footer = () => {
         <Container
             px={[5, 10, 30]}
             py={null}
-            mx={[-5, null, null]}
         >
             <Box my="auto"><a href="mailto:iAmAlex.dev@gmail.com">iAmAlex.dev@gmail.com</a> </Box>
             <StyledList>

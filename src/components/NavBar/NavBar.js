@@ -10,12 +10,12 @@ import { up } from '../../global/mixins';
 const Bar = styled(Box)`
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 `
 
 const NavBar = () => {
     return (
-        <Bar pr={[null, 20, 40]}>
+        <Bar px={[5, 20, 40]}>
             <Logo />
             <FixedButtons />
             <NavMenu />
