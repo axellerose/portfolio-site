@@ -38,8 +38,6 @@ const pictures = [
 
 const Container = styled(Box)`
     background-color: ${props => props.theme.pallete.secondary};
-    margin:  0  -${props => props.theme.space[5]};
-    padding: ${props => props.theme.space[5]};
 `
 const StyledDescription = styled.div`  
     h3 {
@@ -80,7 +78,12 @@ const StyledSvg = styled(Svg)`
 
 const TechAndSkills = () => {
     return (
-        <Container id="skills">
+        <Container
+            id="skills"
+            px={[5, 20, 40]}
+            py={[5, 10, 10]}
+            mx={[-5, null, null]}
+        >
             <StyledDescription>
                 <h4># technology and skills</h4>
                 <h3>Proficiency & Responsibility</h3>

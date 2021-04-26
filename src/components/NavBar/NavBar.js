@@ -11,15 +11,11 @@ const Bar = styled(Box)`
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    ${up.sm`
-        justify-content: space-between;
-    `}
 `
 
 const NavBar = () => {
     return (
-        <Bar>
+        <Bar pr={[null, 20, 40]}>
             <Logo />
             <FixedButtons />
             <NavMenu />

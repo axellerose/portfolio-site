@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { down } from '../../global/mixins';
+import Box from '../common/Box';
 
-const Container = styled.div`
+const Container = styled(Box)`
     .menu__container {
         width: 100%;
         flex-grow: 1;
@@ -16,7 +17,7 @@ const Menu = styled.ul`
     list-style: none;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     
     margin: 0 auto;
     
@@ -25,7 +26,7 @@ const Option = styled.li`
     a {
         text-decoration: none;
         color: inherit;
-        margin-right: 16px;
+        padding-right: 40px;
         &:focus {
             outline: none;
         }
