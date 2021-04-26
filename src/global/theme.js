@@ -1,6 +1,7 @@
 // import "@fontsource/lekton";
 // import "@fontsource/exo/400.css";
 import "@fontsource/quicksand";
+import { between } from 'polished';
 
 const breakpoints = ['40em', '52em', '64em', '80em'] // [640px , 832px, 1024px, 1280px]
 
@@ -18,7 +19,7 @@ const fontFamilyPrimary = `
 `
 const fontFamilySecondary = `
   font-family: "Quicksand";
-  ont-weght: 700;
+  font-weght: 700;
 `
 
 const space = [];
@@ -60,15 +61,15 @@ const typography = {
     `,
   h2: `
       ${fontFamilyPrimary};
-      font-size: 2em;
+      font-size: ${between('28px', '64px', '400px', '1500px')};
     `,
   h3: `
       ${fontFamilyPrimary};
-      font-size: 1.5em;
+      font-size: ${between('24px', '32px', '400px', '1500px')};
     `,
   h4: `
       ${fontFamilySecondary};
-      font-size: 1em;
+      font-size: ${between('16px', '24px', '400px', '1500px')};
       color: ${pallete.text.secondary};
     `,
   logo: `
@@ -77,7 +78,7 @@ const typography = {
     `,
   body: `
       ${fontFamilySecondary};
-      font-size: 1em;
+      font-size: ${between('16px', '22px', '400px', '1500px')};
       line-height: 1.4em;
       `,
   input: `

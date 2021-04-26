@@ -89,7 +89,7 @@ const Card = styled(Box)`
         opacity: 0.85;
         height: 200px;
         border-radius: 10px;
-        background-position: center;
+        background-position: top;
         background-size: cover;
     }
 
@@ -117,6 +117,12 @@ const Portfolio = () => {
             <Swiper
                 slidesPerView={1}
                 navigation
+                breakpoints={{
+                    800: {
+                        slidesPerView: 2,
+                        spaceBetween: 40
+                    },
+                }}
 
             // onSlideChange={() => console.log('slide change')}
             // onSwiper={(swiper) => console.log(swiper)}

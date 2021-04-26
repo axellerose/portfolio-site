@@ -1,4 +1,5 @@
 import React from 'react';
+import { between } from 'polished';
 import styled from 'styled-components';
 import Box from './common/Box';
 import Bg from '../assets/developer.png';
@@ -9,20 +10,24 @@ const ContainerWithBg = styled(Box)`
     display: flex;
     justify-content: flex-start;
     
-    ${up.sm`
-         background-position: left center;
-    `}
-
     .title {
         position: absolute;
         right: 0;
+        ${up.sm`
+        position: relative;
+         background-position: left center;
+         
+
+    `}
     }
 `
 const StyledImage = styled.img`
     margin-top: 2em;
     position: relative;
     width: 60%;
-    z-index: 1;
+    ${up.sm`
+        width: 100%;
+    `}
 `
 
 const StyledTitle = styled.h2`
@@ -36,16 +41,24 @@ const StyledTitle = styled.h2`
     width: 50%;
     margin-right: 0.65em;
     z-index: 2;
+    ${up.sm`
+        text-align: left;
+        margin-left: 20px;
+    `}
+
 `
 
 const StyledBar = styled.div`
     height: 5px;
-    width: 48px;
+    width: ${between('48px', '96px', '400px', '1000px')};
     background-color: ${props => props.theme.pallete.common.yellow[0]};
     margin-left: auto;
     margin-right: 0.5em;
     margin-top: 4px;
     box-shadow: 0 5px 4px rgba(0,0,0, 0.25);
+    ${up.sm`
+        margin-left: 20px;
+    `}
     `
 
 const StyledDescription = styled.div`
@@ -69,11 +82,14 @@ const Header = () => {
     return (
         <>
             <ContainerWithBg flexDirection={['column', 'row', null]}>
-                <StyledImage src={Bg} />
-                <div className="title">
-                    <StyledTitle >Alexander Gerasymenko</StyledTitle>
-                    <StyledBar />
-                </div>
+                <Box>
+
+                    <div className="title">
+                        <StyledTitle >Alexander Gerasymenko</StyledTitle>
+                        <StyledBar />
+                    </div>
+                    <StyledImage src={Bg} />
+                </Box>
 
                 <div>
                     <StyledDescription>

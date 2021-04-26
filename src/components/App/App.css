@@ -10,11 +10,11 @@ html {
 }
   
 body {
-    margin: 0;
+    margin: 0 auto;
     width: 100%;
+    max-width: 1500px;
     height: 100%;
     background-color: #3A3C4D;
-    font-family: 'Lekton';
     color: #DFE0E9;
 }
 

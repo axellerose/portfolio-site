@@ -17,6 +17,7 @@ import { ReactComponent as IconMongo } from '../assets/techIcons/mongo.svg';
 import { ReactComponent as IconRQuery } from '../assets/techIcons/react-query.svg';
 import Svg from './common/Svg';
 import Box from './common/Box';
+import { up } from '../global/mixins';
 
 const pictures = [
     <IconHtml />,
@@ -60,11 +61,20 @@ const StyledPicturesBlock = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    ${up.sm`
+        width: 60%;
+    `}
 `
 const StyledSvg = styled(Svg)`
     margin: 4px;
+    ${up.sm`
+            margin: 6px;
+        `}
     & svg {
         height: 4em;
+        ${up.sm`
+            height: 4.5em;
+        `}
   }
 `
 
