@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { down } from '../../global/mixins';
 import Box from '../common/Box';
-import { color } from 'styled-system';
 
 const Container = styled(Box)`
     .menu__container {
