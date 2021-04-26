@@ -14,7 +14,7 @@ import Footer from '../Footer';
 
 const App = () => (
   <ThemeProvider theme={theme}>
-    <Box mx={[theme.space[5], theme.space[5], theme.space[25], theme.space[50]]} className="App">
+    <Box mx={[5, null, null]} className="App">
       <NavBar />
       <Header />
       <TechAndSkills />

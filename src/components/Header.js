@@ -9,6 +9,10 @@ const ContainerWithBg = styled(Box)`
     width: 100%;
     display: flex;
     justify-content: flex-start;
+
+    ${up.sm`
+        justify-content: space-between;
+    `}
     
     .title {
         position: absolute;
@@ -61,7 +65,7 @@ const StyledBar = styled.div`
     `}
     `
 
-const StyledDescription = styled.div`
+const StyledDescription = styled(Box)`
 
     h3 {
         ${props => props.theme.typography.h3}
@@ -80,30 +84,31 @@ const StyledDescription = styled.div`
 const Header = () => {
 
     return (
-        <>
-            <ContainerWithBg flexDirection={['column', 'row', null]}>
-                <Box>
-
-                    <div className="title">
-                        <StyledTitle >Alexander Gerasymenko</StyledTitle>
-                        <StyledBar />
-                    </div>
-                    <StyledImage src={Bg} />
+        <ContainerWithBg flexDirection={['column', 'row', null]}>
+            <Box>
+                <Box className="title">
+                    <StyledTitle >Alexander Gerasymenko</StyledTitle>
+                    <StyledBar />
                 </Box>
+                <StyledImage src={Bg} />
+            </Box>
 
-                <div>
-                    <StyledDescription>
-                        <h4># introduction</h4>
-                        <h3>Full-Stack Web Developer, <br /> based in Barcelona, Spain</h3>
-                        <p>A fast-learning and responsible person that is looking for new opportunities and challenges.
-                        My 4 year experience of working in IT company as International Sales manager & QA
-                        boosted my communication skills, ability to work under stress conditions and multicultural collaboration.
+            <Box px={[null]}>
+                <StyledDescription
+                    px={[5, 20, 30]}
+                    py={[5, 10, 10]}
+                    pl={[5, 20, 40]}
+                >
+                    <h4># introduction</h4>
+                    <h3>Full-Stack Web Developer, <br /> based in Barcelona, Spain</h3>
+                    <p>A fast-learning and responsible person that is looking for new opportunities and challenges.
+                    My 4 year experience of working in IT company as International Sales manager & QA
+                    boosted my communication skills, ability to work under stress conditions and multicultural collaboration.
                     </p>
-                        <a href="https://drive.google.com/file/d/1HFnFJt_Bnwe1IxatwKriJYufrciOx3DJ/view?usp=sharing" target="_blank" rel="noreferrer">{"check my CV >>"}</a>
-                    </StyledDescription>
-                </div>
-            </ContainerWithBg>
-        </>
+                    <a href="https://drive.google.com/file/d/1HFnFJt_Bnwe1IxatwKriJYufrciOx3DJ/view?usp=sharing" target="_blank" rel="noreferrer">{"check my CV >>"}</a>
+                </StyledDescription>
+            </Box>
+        </ContainerWithBg>
     )
 }
 

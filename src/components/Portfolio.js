@@ -17,22 +17,15 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 const Container = styled(Box)`
     background-color: ${props => props.theme.pallete.secondary};
-    margin: 0 -20px;
-    padding: 20px 0;
 
     .swiper-container {
       width: 100%;
       height: 100%;
-
-      ${up.sm`
-        width: 80%;
-      `}
     }
   
     .swiper-button-next, .swiper-button-prev {
         color: white;
         outline: none;
-        margin: auto 0;
     }
 
     .swiper-slide {
@@ -52,7 +45,6 @@ const Container = styled(Box)`
       -ms-flex-align: center;
       -webkit-align-items: center;
       align-items: center;
-      
     }
     h5 {
         ${props => props.theme.typography.h5}
@@ -82,16 +74,13 @@ const StyledDescription = styled.div`
 const Card = styled(Box)`
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 70%;
     padding-bottom: 20px;
     background: rgba(255,255,255, 0.35);
     border-radius: 10px;
     box-shadow: 1px 2px 5px rgba(1,1,1, 0.35);
     margin-bottom: 20px;
 
-    ${up.md`
-        width: 40%;
-    `}
 
     & .card__image {
         opacity: 0.85;
@@ -130,7 +119,12 @@ const Card = styled(Box)`
 
 const Portfolio = () => {
     return (
-        <Container id="projects">
+        <Container
+            id="projects"
+            px={[5, 20, 40]}
+            py={[5, 10, 10]}
+            mx={[-5, null, null]}
+        >
             <StyledDescription>
                 <h4># portfolio</h4>
                 <h3>Projects and Selected Works</h3>
@@ -138,13 +132,20 @@ const Portfolio = () => {
             <Swiper
                 slidesPerView={1}
                 navigation
-
+                breakpoints={{
+                    700: {
+                        slidesPerView: 2
+                    },
+                    1080: {
+                        slidesPerView: 3
+                    }
+                }}
             // onSlideChange={() => console.log('slide change')}
             // onSwiper={(swiper) => console.log(swiper)}
             >
                 {projects.map((project, index) => (
                     <SwiperSlide key={index}>
-                        <Card>
+                        <Card height={['350px', '400px', '450px']}>
                             <div
                                 className="card__image"
                                 style={{ backgroundImage: `url(${project.image})` }}
@@ -152,11 +153,14 @@ const Portfolio = () => {
                             />
                             <div className="card__description">
                                 <h4>{project.title}</h4>
-                                <h5 style={{ textAlign: "left" }}>Tech spec:</h5>
-                                <p>{project.description}</p>
-                                <div className="link">
-                                    <a href={project.link}>{"See project >>"}</a>
-                                </div>
+                                <Box display="flex" flexDirection="column" justifyContent="space-between">
+                                    <h5 style={{ textAlign: "left" }}>Tech spec:</h5>
+                                    <p>{project.description}</p>
+                                    <div className="link">
+                                        <a href={project.link}>{"See project >>"}</a>
+                                    </div>
+                                </Box>
+
 
                             </div>
                         </Card>

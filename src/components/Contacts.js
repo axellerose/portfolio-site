@@ -140,7 +140,13 @@ const Contacts = () => {
     }
 
     return (
-        <Container display="flex" flexDirection={["column", "row"]}>
+        <Container
+            display="flex"
+            flexDirection={["column", "row"]}
+            px={[5, 20, 40]}
+            py={[5, 10, 10]}
+            mx={[-5, null, null]}
+        >
             {loading && <Loader />}
             {modal &&
                 <StyledModal>
