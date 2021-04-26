@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { up, down } from '../../global/mixins';
+import { down } from '../../global/mixins';
 
 const Container = styled.div`
     .menu__container {

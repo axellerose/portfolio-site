@@ -6,28 +6,36 @@ import { up } from '../global/mixins';
 
 const ContainerWithBg = styled(Box)`
     width: 100%;
-    background-image: url(${Bg});
-    background-size: 60%;
-    background-position: left top;
-    background-repeat: no-repeat;
     display: flex;
-    flex-direction: column;
     justify-content: flex-start;
     
-
     ${up.sm`
-        height: 12rem;
+         background-position: left center;
     `}
+
+    .title {
+        position: absolute;
+        right: 0;
+    }
 `
+const StyledImage = styled.img`
+    margin-top: 2em;
+    position: relative;
+    width: 60%;
+    z-index: 1;
+`
+
 const StyledTitle = styled.h2`
     ${props => props.theme.typography.h2};
+    color: #fff;
     text-shadow: 0 1px 2px rgba(58, 60, 77, 1);
     display: flex;
     text-align: right;
     margin-left: auto;
     margin-bottom: 0;
     width: 50%;
-    margin-right: 0.5em;
+    margin-right: 0.65em;
+    z-index: 2;
 `
 
 const StyledBar = styled.div`
@@ -40,14 +48,8 @@ const StyledBar = styled.div`
     box-shadow: 0 5px 4px rgba(0,0,0, 0.25);
     `
 
-const Spacer = styled.div`
-    width: 100%;
-    height: 10vh;
-
-`
-
 const StyledDescription = styled.div`
-    margin: 60px 0;
+
     h3 {
         ${props => props.theme.typography.h3}
     }
@@ -67,9 +69,12 @@ const Header = () => {
     return (
         <>
             <ContainerWithBg flexDirection={['column', 'row', null]}>
-                <StyledTitle >Alexander Gerasymenko</StyledTitle>
-                <StyledBar />
-                <Spacer />
+                <StyledImage src={Bg} />
+                <div className="title">
+                    <StyledTitle >Alexander Gerasymenko</StyledTitle>
+                    <StyledBar />
+                </div>
+
                 <div>
                     <StyledDescription>
                         <h4># introduction</h4>

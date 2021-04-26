@@ -135,7 +135,7 @@ const Contacts = () => {
 
             <StyledDescription>
                 <h4># contact me</h4>
-                <h3>Have got a Project? Let's talk!</h3>
+                <h3>Have a Project? Let's talk!</h3>
             </StyledDescription>
             <Box display="flex" justifyContent="space-around" >
                 <StyledImage />
