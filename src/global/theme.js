@@ -86,7 +86,7 @@ const typography = {
       background: none;
       border: none;
       line-height: 1.2em;
-      font-size: 1em;
+      font-size: ${between('16px', '24px', '400px', '1500px')};
       outline: none;
       ${fontFamilyPrimary};
       resize: none;
@@ -97,6 +97,7 @@ const typography = {
   label: `
     ${fontFamilySecondary};
     line-height: 1.2em;
+    font-size: ${between('16px', '24px', '400px', '1500px')};
 
   `,
   link: `
@@ -108,7 +109,7 @@ const typography = {
   button: `
       background-color: ${pallete.button};
       color: ${pallete.secondary};
-      ${fontFamilyPrimary};
+      ${fontFamilySecondary};
       font-size: 1em;
       font-weight: 700;
       border: none;
