@@ -72,6 +72,7 @@ const typography = {
       font-size: ${between('16px', '24px', '400px', '1500px')};
       color: ${pallete.text.secondary};
     `,
+
   logo: `
       ${fontFamilyPrimary};
       font-size: 2em;
@@ -104,7 +105,7 @@ const typography = {
       color: ${pallete.text.active};
       ${fontFamilyPrimary};
       text-decoration: underline;
-      font-size: 1.25em;
+      font-size: ${between('12px', '20px', '400px', '1500px')};
     `,
   button: `
       background-color: ${pallete.button};
