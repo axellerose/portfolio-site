@@ -157,7 +157,7 @@ const Contacts = () => {
                     <button type="button" onClick={modalHandler}>OK</button>
                 </StyledModal>
             }
-            <Box display="flex" flexDirection="column" mx="auto">
+            <Box display="flex" flexDirection="column" mr="auto">
                 <StyledDescription>
                     <h4># contact me</h4>
                     <h3>Have a Project? Let's talk!</h3>
